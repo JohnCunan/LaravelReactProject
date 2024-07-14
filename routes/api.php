@@ -13,3 +13,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/save-task', [TaskApiController::class,'saveTask']);
 
 Route::get('/get-task-list', [TaskApiController::class,'getAllTask']);
+
+Route::put('/mark-as-done/{id}', [TaskApiController::class,'markAsDone']);
+
+Route::delete('/delete-task/{id}', [TaskApiController::class,'deleteTask']);
